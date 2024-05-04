@@ -1,0 +1,13 @@
+# Indenters, Formatters
+.prettierrc
+
+# Node Modules
+node_modules
+
+# Configurations
+config.json
+configuration.json
+settings.json
+.env
+
+# Git Ignore

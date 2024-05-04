@@ -2,7 +2,7 @@
 
 <img src="./docs/images/JavaScript-logo.png" align="right" width=150>
 
-**HEADS UP** ANSILogger is not finalized, let alone confirmed working.
+**HEADS UP:** ANSILogger is not finalized, there may be stil bugs surronding it's code.
 
 **ANSILoggerJS** is a compact Javascript 'plugin' that removes the **boringness** from logging & debugging with it's color-enabled log features using the **'ANSI'** format that works in most terminal outputs.
 
@@ -63,15 +63,75 @@ Suitable for JS that handles webservers or applications, such as a express app f
 
 ### Client JS
 
-**Example:** ⚠️ Example not avaliable.
+**Example:** <a href="./docs/examples/example-client.html">/docs/examples/example-client.html</a>
 
-⌛ Instructions coming soon when support is provided.
+<details><summary><b>Show instructions</b></summary>
+    
+1. **Import** ASNILogger via 'script'
+    
+    If you've stored a version of ANSILogger locally in a '/assets' type folder, or has been provided via a CDN of some sort. Link it by doing this in your HTML file:
+
+    ```html
+    <script src="/path/to/file"></script>
+    ```
+
+2. **Define** your new logger element.
+
+    Using this script block, either under the body tag or in your head tag, you can now define this as:
+
+    ```html
+    <script src="/path/to/file">
+        const ansi = new ANSILogger({
+            tagName: "My Tag Name",
+            fillStringWithColor: false
+        });
+    </script>
+
+    This means it should then be usable in your normal script.js file.
+
+3. **Use** in your script.
+
+    Once fully setup and configured following steps 2 & 3, you can try do the following.
+
+    Normal JS
+    ```js
+        document.addEventListener("DOMContentLoaded", function() {
+            ansi.log("Page loaded successfully!")
+        });
+    ```
+
+    jQuery
+    ```js
+        $(document).ready(function() {
+            ansi.log("Page loaded successfully!")
+        });
+    ```
+
+    **⚠️ If you experience an error:**
+    You've incorrectly followed the steps above, or
+    the documentation (here) is missing a step that is
+    important. 
+
+    If so, head over to Issues and create a new issue surronding your error message.
+</details>
 
 ## Current Support
 
--    ❌ Client JS
-     -    **Why:** Not tested to work on a client side script, and is still being made compatiable.
+-    ✅ Client JS
+     -    **Why:** It has been proven to work if you are using logger.main.js, but may be buggy.
 -    ❌ Other Languages (TS, PY etc.)
      -    **Why:** Other languages require their own version in their own language, a TS version is being worked on.
 -    ✅ Normal JS
      -    **Why:** Normal JS (non-browser friendly JS) allows this 'plugin' to work as intended, as it tends to use code such as `module.exports = {}`
+
+
+## Reporting Errors, Bugs (etc.)
+If you tend to run into a issue, such as a repeated error message or bug. Or even if the **Usage** docs been incorrect.
+
+The best place to report it is via **[Issues](https://github.com/TheWiredDiabetic/ANSILoggerJS/issues) tab** as it can be easily organized to provide solutions or hotfixes for certain errors or issues that occur using either versions of ANSILogger.
+
+## Contributing
+If you wish to contribute to this project, you may make forks or even a pull request with your improvements or fixes.
+
+All contrubitions will be appericated and you may
+appear on this readme or a contributions list (whenever it happens.)
