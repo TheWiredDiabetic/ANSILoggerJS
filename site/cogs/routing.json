@@ -1,0 +1,5 @@
+{
+	"public_dir": "static",
+	"assets_dir": "assets",
+	"releases_dir": "releases"
+}

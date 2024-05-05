@@ -1,0 +1,104 @@
+/* Quick patches and add-ons for bootstrap elements */
+
+
+body {
+     --sb-track-color: #232E33;
+     --sb-thumb-color: #d0a962;
+     --sb-size: 10px;
+   }
+   
+   body::-webkit-scrollbar {
+     width: var(--sb-size)
+   }
+   
+   body::-webkit-scrollbar-track {
+     background: var(--sb-track-color);
+     border-radius: 3px;
+   }
+   
+   body::-webkit-scrollbar-thumb {
+     background: var(--sb-thumb-color);
+     border-radius: 3px;
+     border: 2px solid #232E33;
+   }
+   
+   @supports not selector(::-webkit-scrollbar) {
+     body {
+       scrollbar-color: var(--sb-thumb-color)
+                        var(--sb-track-color);
+     }
+   }
+
+.opening-flood {
+     padding: 2rem 3rem;
+     text-align: center;
+}
+
+.opening-flood-min {
+    padding: 5rem 1rem;
+    text-align: left;
+}
+
+.opening-flood-min-a {
+     padding-top: 2rem;
+     text-align: left;
+}
+
+a.sanitize {
+     text-decoration: none;
+     color: inherit;
+}
+ 
+
+.opening-flood-sec {
+    padding: 3rem 3rem;
+    text-align: left;
+}
+
+.opening-flood h1 {
+     color: #ffce7c;
+     font-size: 3rem;
+}
+
+.text-parcel {
+     color: #ffce7c;
+}
+
+.bg-parcel {
+    background-color: #af8d53;
+    color: #ffffff;
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .75rem;
+}
+
+.btn-bd-primary {
+     --bs-btn-font-weight: 600;
+     --bs-btn-color: #c09e63;
+     --bs-btn-bg: var(--bd-violet-bg);
+     --bs-btn-border-color: #c09e63;
+     --bs-btn-hover-color: #ffce7c;
+     --bs-btn-hover-bg: ffce7c;
+     --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+     --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+     --bs-btn-active-color: var(--bs-btn-hover-color);
+     --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+     --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+.btn-bd-secondary {
+     --bs-btn-font-weight: 500;
+     --bs-btn-color: #967c4f;
+     --bs-btn-bg: var(--bd-violet-bg);
+     --bs-btn-border-color: #967c4f;
+     --bs-btn-hover-color: #ffce7c;
+     --bs-btn-hover-bg: ffce7c;
+     --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+     --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+     --bs-btn-active-color: var(--bs-btn-hover-color);
+     --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+     --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
